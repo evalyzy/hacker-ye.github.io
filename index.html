@@ -152,6 +152,74 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-如何通过github和hexo搭建个人博客 (1)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>@<a href="%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8GitHub%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2">TOC</a></p>
+<pre><code>  计科小白在看了无数篇博客，踩了无数个坑后总算搭建好了个人博客，一下是我自己的一些小总结，分享给各位小白，也请大神在发现错误后进行指出，我会加以改正</code></pre>
+<h2 id="一、下载"><a href="#一、下载" class="headerlink" title="一、下载"></a>一、下载</h2><p>  首先我们需要安装必备插件git，node.js，在官网下载即可，git如果官网下载特别慢，可以在<a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors/git-for-windows/">https://npm.taobao.org/mirrors/git-for-windows/</a>处下载。<br>  下载好后，创建一个文件夹，我们就可以安装制作静态网页的插件hexo了。<br>  右键创建好的文件夹，选择git bash here来打开小黑框。依次输入<br>  <code>nmp install -g hexo</code><br>  安装hexo的基础框架</p>
+<p><code>hexo init</code><br>来初始化hexo</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install&#96;&#96;&#96;</span><br></pre></td></tr></table></figure>
+<p>来安装npm</p>
+<h2 id="二、生成静态页面"><a href="#二、生成静态页面" class="headerlink" title="二、生成静态页面"></a>二、生成静态页面</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo</span><br></pre></td></tr></table></figure>
+<p>来生成静态界面</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20201210232224171.png" alt="成功后的图片"><br>此时你可以在浏览器输入网址localhost:4000来查看生成的静态主页<br>看完后记得Ctrl+C去关闭服务</p>
+<h2 id="三、注册github账号并开通数据库"><a href="#三、注册github账号并开通数据库" class="headerlink" title="三、注册github账号并开通数据库"></a>三、注册github账号并开通数据库</h2><p> 我们要利用github存放博客主页，肯定要先注册给github账号，按流程来就行了，然后在右上角<img src="https://img-blog.csdnimg.cn/20201210232847760.png#pic_right" alt="创建数据库"><br>该位置点击New repository,得到如下界面<img src="https://img-blog.csdnimg.cn/20201210233120601.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MjQzMzU0Nw==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>注意，数据库一定要按我的格式，即yourname.github.io，然后就创建好了你的数据库。</p>
+<h2 id="三、配置git个人数据"><a href="#三、配置git个人数据" class="headerlink" title="三、配置git个人数据"></a>三、配置git个人数据</h2><p>按一下格式一次输入即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;xxxname&quot;</span><br><span class="line"> </span><br><span class="line">git config --global user.email &quot;xxxemail&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>然后输入一下代码可查看绑定的内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">it config --list</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="四、设置你的ssh密匙"><a href="#四、设置你的ssh密匙" class="headerlink" title="四、设置你的ssh密匙"></a>四、设置你的ssh密匙</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;xxxemail</span><br></pre></td></tr></table></figure>
+
+<p>输入以上代码一路回车即可生成你的ssh文件<br><img src="https://img-blog.csdnimg.cn/2020121023374767.png#pic_center" alt="在这里插入图片描述"><br>我的ssh文件位于次位置，找到公共密匙（public），将其复制。<br>然后打开github网页<img src="https://img-blog.csdnimg.cn/20201210234224570.png#pic_center" alt="在这里插入图片描述"><br>点开settings<img src="https://img-blog.csdnimg.cn/20201210234318442.png#pic_center" alt="在这里插入图片描述"><br>点击SSH and GPG keys绑定你的ssh即可（有手就行）</p>
+<h2 id="五、上传主页到github"><a href="#五、上传主页到github" class="headerlink" title="五、上传主页到github"></a>五、上传主页到github</h2><p>`在我们的blog文件里打开用vscode或记事本里打开图示文件<img src="https://img-blog.csdnimg.cn/20201210234700295.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MjQzMzU0Nw==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>然后在最后将内容改成图示<img src="https://img-blog.csdnimg.cn/20201210234726777.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MjQzMzU0Nw==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>红点标注的位置记得空格<br>最后我们按图示代码将你的页面传到github</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>静候几秒你就可以在你的浏览器输入网址<a target="_blank" rel="noopener" href="http://yourname.github.io查看到自己的主页啦(这个时候还是hexo生成的)/">http://yourname.github.io查看到自己的主页啦（这个时候还是hexo生成的）</a></p>
+<h2 id="下一篇我将介绍修改博客主题以及优化一些细节等去让你的blog主页更美观"><a href="#下一篇我将介绍修改博客主题以及优化一些细节等去让你的blog主页更美观" class="headerlink" title="下一篇我将介绍修改博客主题以及优化一些细节等去让你的blog主页更美观"></a>下一篇我将介绍修改博客主题以及优化一些细节等去让你的blog主页更美观</h2>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/12/10/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87github%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%20(1)/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
