@@ -8,11 +8,15 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>hacker-ye</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="php数据">
+<meta property="og:type" content="article">
 <meta property="og:title" content="hacker-ye">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/2021/01/10/php%E6%95%B0%E6%8D%AE/index.html">
 <meta property="og:site_name" content="hacker-ye">
+<meta property="og:description" content="php数据">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-01-10T15:11:46.160Z">
+<meta property="article:modified_time" content="2021-01-10T15:12:49.730Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -150,19 +154,52 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-php数据" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-php数据" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="php数据"><a href="#php数据" class="headerlink" title="php数据"></a>php数据</h1>
-        
-          <a class="article-more-a" href="/2021/01/10/php%E6%95%B0%E6%8D%AE/#more">more >></a>
-        
+        <h1 id="php数据"><a href="#php数据" class="headerlink" title="php数据"></a>php数据</h1><a id="more"></a>
+
+<h4 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h4><h6 id="定义常量"><a href="#定义常量" class="headerlink" title="定义常量"></a>定义常量</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">&#x2F;&#x2F;常量的定义</span><br><span class="line">&#x2F;&#x2F;方法一</span><br><span class="line">const a &#x3D; 3;</span><br><span class="line">&#x2F;&#x2F;方法二</span><br><span class="line">define(&#39;b&#39;,4);</span><br><span class="line">echo a,&#39;&lt;br&#x2F;&gt;&#39;,b;</span><br><span class="line">![&#96;&#96;&#96;](https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20210110230156552.png)</span><br><span class="line"></span><br><span class="line">以特殊符号开头命名的常量定义只能用define函数</span><br><span class="line">###### 系统常量</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>PHP_VERSION             //PHP版本号<br>PHP_INT_SIZE             //PHP中int型变量大小，其他以此类推<br>PHP_INT_MAX            //php中整型能表示的最大值</p>
+<h6 id="魔术变量的使用"><a href="#魔术变量的使用" class="headerlink" title="魔术变量的使用"></a>魔术变量的使用</h6><?php
+//魔术常量的使用
+echo __DIR__,'<br/>',__FILE__,'<br/>',__LINE__,'<br/>',__METHOD_
+#### 数据类型转换
+php本身数据是没有类型的，php是弱类型语言。
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">&#x2F;&#x2F;php中数据类型转换</span><br><span class="line">$a &#x3D; 1.1;</span><br><span class="line">echo (int)$a;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+###### 数据类型的判断
+运用函数is_int($a);
+得到的结果为bool型。因为bool型无法进行输出，所以需要借用函数var_dump
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">&#x2F;&#x2F;php中数据类型判断</span><br><span class="line">$a &#x3D; 1.1;</span><br><span class="line">var_dump(is_float($a));</span><br></pre></td></tr></table></figure>
+
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -171,16 +208,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/01/10/php%E6%95%B0%E6%8D%AE/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/01/10/php%E6%95%B0%E6%8D%AE/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/12/17/csdn_export_md%20(5)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -200,322 +296,14 @@
 
 
 
-
   
-    <article id="post-csdn_export_md (5)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="指针编写函数invstr–字符串逆序存放输出"><a href="#指针编写函数invstr–字符串逆序存放输出" class="headerlink" title="#指针编写函数invstr–字符串逆序存放输出#"></a>#指针编写函数invstr–字符串逆序存放输出#</h2>
-        
-          <a class="article-more-a" href="/2020/12/17/csdn_export_md%20(5)/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/12/17/csdn_export_md%20(5)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
-    <article id="post-记录一下PHP语言的各种数据类型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="记录一下PHP语言的各种数据类型"><a href="#记录一下PHP语言的各种数据类型" class="headerlink" title="记录一下PHP语言的各种数据类型"></a>记录一下PHP语言的各种数据类型</h2><p>昨天因为懒，而且学会的干货不多。就放在今天的博客里了。</p>
-        
-          <a class="article-more-a" href="/2020/12/17/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8BPHP%E8%AF%AD%E8%A8%80%E7%9A%84%E5%90%84%E7%A7%8D%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/12/17/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8BPHP%E8%AF%AD%E8%A8%80%E7%9A%84%E5%90%84%E7%A7%8D%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-php初步" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="php初步"><a href="#php初步" class="headerlink" title="php初步"></a>php初步</h2><p>今天总算写出了第一串php代码，好鸡冻！！</p>
-        
-          <a class="article-more-a" href="/2020/12/14/php%E5%88%9D%E6%AD%A5/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/12/14/php%E5%88%9D%E6%AD%A5/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-更改你的博客主题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="更改你的博客主题（yilia）"><a href="#更改你的博客主题（yilia）" class="headerlink" title="更改你的博客主题（yilia）"></a>更改你的博客主题（yilia）</h2>
-        
-          <a class="article-more-a" href="/2020/12/12/%E6%9B%B4%E6%94%B9%E4%BD%A0%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/12/12/%E6%9B%B4%E6%94%B9%E4%BD%A0%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-如何通过github和hexo搭建个人博客 (1)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>如何利用GitHub和hexo搭建个人博客</p>
-<pre><code>  计科小白在看了无数篇博客，踩了无数个坑后总算搭建好了个人博客，以下是我自己的一些小总结，分享给各位小白，也请大神在发现错误后进行指出，我会加以改正</code></pre>
-        
-          <a class="article-more-a" href="/2020/12/10/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87github%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%20(1)/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/12/10/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87github%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%20(1)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/12/10/hello-world/">我的第一篇博客</a>
-    </h1>
   
 
-        
-        <a href="/2020/12/10/hello-world/" class="archive-article-date">
-  	<time datetime="2020-12-10T03:20:30.727Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>千辛万苦，我总算搭建好了自己的博客主页啦啦啦！！</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/12/10/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
+  
 
   
+
   
 
 
@@ -538,8 +326,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
