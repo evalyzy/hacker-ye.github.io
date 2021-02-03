@@ -8,17 +8,19 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>hacker-ye</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="PY初步sep&#x3D; ；多个数据输出的分隔符 12print(a,b,sep&#x3D;&quot;#&quot;)                                        #输出ab end&#x3D;” “; 输出完成时默认追加的数据，默认为\n（换行）%f默认保留六位小数，具体保留几位小数和c一样">
+  <meta name="description" content="PY初步">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hacker-ye">
-<meta property="og:url" content="http://example.com/2021/02/03/PY%E5%88%9D%E6%AD%A5/index.html">
+<meta property="og:url" content="http://example.com/2021/02/04/PY%E5%88%9D%E6%AD%A52.0/index.html">
 <meta property="og:site_name" content="hacker-ye">
-<meta property="og:description" content="PY初步sep&#x3D; ；多个数据输出的分隔符 12print(a,b,sep&#x3D;&quot;#&quot;)                                        #输出ab end&#x3D;” “; 输出完成时默认追加的数据，默认为\n（换行）%f默认保留六位小数，具体保留几位小数和c一样">
+<meta property="og:description" content="PY初步">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-02-02T16:28:41.192Z">
-<meta property="article:modified_time" content="2021-02-02T16:28:41.192Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210204005158149.png">
+<meta property="article:published_time" content="2021-02-03T17:15:42.210Z">
+<meta property="article:modified_time" content="2021-02-03T17:15:42.210Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20210204005158149.png">
   
     <link rel="alternative" href="/atom.xml" title="hacker-ye" type="application/atom+xml">
   
@@ -154,14 +156,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-PY初步" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-PY初步2.0" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="PY初步"><a href="#PY初步" class="headerlink" title="PY初步"></a>PY初步</h2><p>sep= ；多个数据输出的分隔符</p>
+        <h2 id="PY初步"><a href="#PY初步" class="headerlink" title="PY初步"></a>PY初步</h2><a id="more"></a>
+
+<p>sep= ；多个数据输出的分隔符</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(a,b,sep&#x3D;&quot;#&quot;)                                        #输出ab</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>end=” “; 输出完成时默认追加的数据，默认为\n（换行）<br>%f默认保留六位小数，具体保留几位小数和c一样</p>
+<p>end=” “; 输出完成时默认追加的数据，默认为\n（换行）<br>%f默认保留六位小数，具体保留几位小数和c一样<br>PY支持多个变量同时赋值<br>**为指数运算符<br>//表示取整除<br>type()；求数据类型的函数<br>eval（）提取字符串中的内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">&#x27;1+2&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">eval</span>(str))</span><br></pre></td></tr></table></figure>
+<p>输出为3<br>PY中特别要注意的是input()函数输入时是以数组的形式作为储存，所以要比较时必须转换数据类型<br>PY中for循环与php和c有很大不同，语法格式为 for 临时变量 in 容器类型的数据</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ye = <span class="string">&quot;叶卓远&quot;</span></span><br><span class="line"><span class="keyword">for</span> name <span class="keyword">in</span> ye:</span><br><span class="line">    <span class="built_in">print</span>(name)</span><br></pre></td></tr></table></figure>
+<p>结果为<br><img src="https://img-blog.csdnimg.cn/20210204005158149.png" alt="在这里插入图片描述"><br>range(起始数据,终止数据,步长)，取不到终止数据；步长默认为1；步长只能为int类型<br>range（数据1）中数据1是结束数据，起始数据默认为0<br>循环语句与else的联合使用，当循环语句未被break时，执行else语句</p>
 
       
 
@@ -241,7 +249,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/02/03/PY%E5%88%9D%E6%AD%A5/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/02/04/PY%E5%88%9D%E6%AD%A52.0/" alt="微信分享二维码">
     </div>
 </div>
 
